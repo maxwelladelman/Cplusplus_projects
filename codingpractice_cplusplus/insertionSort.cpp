@@ -10,6 +10,10 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
+void createList(ListNode* list, int arr[], int size);
+void displayList(ListNode* list);
+ListNode* insertionSortList(ListNode* head);
+
 
 int main() {
 
@@ -18,10 +22,13 @@ int main() {
     int size = 8;
     int arr[] = { 1,7,4,2,8,3,9,5 };
 
-    list1->next = new ListNode(1);
-    list1->next->next = new ListNode(2);
-    list1->next->next->next = new ListNode(4);
+    createList(list1, arr, size);
+    cout << "unsorted\n";
+    displayList(list1);
+    cout << "\nsorted using insertion sort\n";
 
+    insertionSortList(list1);
+    displayList(list1);
 
 
 
@@ -29,18 +36,28 @@ int main() {
 
 }
 
-//ListNode* createList(int arr[], int size) {
-//    int size = 0;
-//    for () {
-//        size++;
-//
-//    }
-//
-//
-//}
+void createList(ListNode* list,int arr[], int size) {
+    ListNode* temp = list;//points to first element of list
+    for (int k = 0; k < size; k++) {
+        temp->next = new ListNode(arr[k]);
+        temp = temp->next;
+        
+
+    }
 
 
+}
 
+
+void displayList(ListNode* list) {
+    ListNode* temp = list;
+
+    while (temp != NULL) {
+        cout << temp->val << " ";
+        temp = temp->next;
+    }
+
+}
 
 ListNode* insertionSortList(ListNode* head) {
 

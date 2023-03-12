@@ -24,5 +24,8 @@
     <ClCompile Include="runningsum1d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Martix2DSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

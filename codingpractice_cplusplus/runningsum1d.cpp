@@ -30,7 +30,9 @@ vector<int> runningSum(vector<int>& nums) {
 	for (int k = 0; k < nums.size(); k++) {
 		output[k] = nums[k] + sum;
 		sum = output[k];
-	}
+	}	
+
+	
 
 	return output;
 
